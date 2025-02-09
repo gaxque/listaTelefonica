@@ -1,4 +1,20 @@
-    //Função de adicionar contato
+
+$(document).ready(function() {
+    $('header').click(function() {
+        $('form').slideDown(); // ANIMACAO BARRA DESCENDO
+    });
+
+    $('header').on('dblclick', function() {
+        $('form').slideUp(); // ANIMACAO BARRA SUBINDO
+    });
+
+    // Evento de duplo clique para remover contatos
+    $(document).on('dblclick', 'li', function() {
+        $(this).remove();
+    });
+});
+
+//Função de adicionar contato
 function AdicionarContato(){
 
         //buscando o DOM - Numero e pegando o valor.
@@ -23,13 +39,19 @@ function AdicionarContato(){
             listaContato.appendChild(novoContato)
 
                 //mensagem sucesso
-            let mensagemSucesso = "Contato adicionado:"
+            let mensagemSucesso = "TOQUE DUAS VEZES PARA APAGAR"
             document.getElementById('mensagem').textContent = mensagemSucesso 
+            document.getElementById('mensagem').className = "mensagem-sucesso";
 
         }
         //Atualiza os forms e zera conteudo;
         inputNomePessoa.value = "";
         inputTelefonePessoa.value = "";
+
+            // IMPLEMENTACAO JQUERRY PARA CLICAR DUAS VEZES E REMOVER CONTATO;
+        $(document).on('dblclick', 'li', function () {
+            $(this).remove();
+        });
 }
 
 

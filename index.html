@@ -8,22 +8,35 @@
 
 </head>
 <body>
-        <div class="container">
+    <p class="texto-inicial">
+        [ Clique uma vez em "Lista Telefonica" para inicar ]
+    </p>
+    <div class="container">
             <header>
                 <h1>Lista Telefônica</h1>
             </header>
-            <input type="text" id="inputNome" placeholder="Digite o nome: " required>
+                <form>
+                    <input type="text" id="inputNome" placeholder="Digite o nome: " required>
 
-            <input type="number" id="inputNumero" required placeholder = "Somente os números" maxlength="15" minlength="11">
+                    <input type="number" id="inputNumero" required placeholder = "Somente os números" maxlength="15" minlength="11">
 
-            <button onclick="AdicionarContato()">Adicionar +</button>
-
+                    <button onclick="AdicionarContato()">Adicionar +</button>
+                </form>
             <p id="mensagem"></p>
 
             <p id="id-contato"></p>
-            <ul id="listaContato"></ul>
+                <ul id="listaContato"></ul>
         </div>
 
+        <footer>
+            <p>
+                &copy; 2025 
+            </p>
+            <p>
+                <a href="https://github.com/gaxque" target="_blank">Gabriel Gasque</a>
+            </p>
+        </footer>
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>

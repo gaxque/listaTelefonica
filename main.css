@@ -7,6 +7,7 @@
 
 .container {
     margin-top: 150px;
+    overflow: hidden;
     text-align: center;
     padding: 20px;
     border-radius: 8px;
@@ -15,8 +16,7 @@
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #27276c;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,21 +45,26 @@ header h1 {
     font-weight: bold;
 }
 
+form {
+    display: none;
+}
+
 input {
     flex: 1;
     padding: 10px;
     border: 1px solid #6200ea;
-    border-radius: 4px;
+    border-radius: 41px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.5s ease;
+    box-shadow: 0 4px 6px rgba(102, 0, 255, 0.1);
 }
 
 input:focus {
     border-color: #6200ea;
 }
 
-.inputNumero, button {
+button {
     padding: 10px 20px;
     background-color: #6200ea;
     color: white;
@@ -68,10 +73,11 @@ input:focus {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
 button:hover {
-    background-color: #3700b3;
+    transform: scale(1.05);
 }
 
 p {
@@ -92,10 +98,6 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
-    background-color: #3700b3;
-}
-
 ul {
     list-style-type: none;
 }
@@ -104,7 +106,47 @@ ul li {
     padding: 10px;
     display: flex;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(174, 0, 255, 0.268);
-    
+    background-color: #6200ead2;
+    box-shadow: 0 2px 10px #6200ea;
+    cursor: pointer;
+
+}
+
+ul li:hover {
+    background-color: #6200ea;
+    color: white;
+    transform: scale(1.05);
+}
+
+.mensagem-sucesso {
+    color: #6200ea;; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    margin-top: 19px; /* Espaçamento superior */
+}
+
+.texto-inicial {
+    color: #ffffff;
+    font-family: monospace; /* Fonte de máquina de escrever */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    margin: 0 auto; /* Centraliza o texto */
+    letter-spacing: 0.15em; /* Espaçamento entre letras */    
+}
+
+footer {
+    width: 100%;
+    color: antiquewhite;
+    bottom: 0;
+    height: 9%;
+    background-color: #27276c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+footer a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: antiquewhite;
 }
 
